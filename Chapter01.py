@@ -23,14 +23,12 @@ for i in range(len(string)):
 #Check Permutation: Given two strings,write a method to decide if one is a permutation of the
 #other.
 
-#Seting up the values an a list
 string1 = "hola"
 l_str1 = []
 
 string2 = "holahola"
 l_str2 = []
 
-#Iterating in each str to add all the parts of it
 for i in range(len(string1)):
     l_str1.append(string1[:i])
 l_str1.append(string1)
@@ -41,7 +39,6 @@ for i in range(len(string2)):
 l_str2.append(string2)
 l_str2.pop(0)
 
-#Iteraring in the l_str1 in seach of a pattern
 for i in l_str1:
     if i in l_str2:
         if i * int(len(string2) / len(i)) == string2:
@@ -66,3 +63,26 @@ def spaceFill(link):
 
     return fianlLink
 print(spaceFill("Hola amigo yo estoy bien"))
+
+
+#1.4
+
+#Palindrome Permutation: Given a string, write a function to check if it is a permutation of a palin­ drome.
+# A palindrome is a word or phrase that is the same forwards and backwards.A permutation is a rearrangement of letters.
+# The palindrome does not need to be limited to just dictionary words.
+
+string = input("Ingresa una frase: ")
+
+format_string = string.replace(" ", "")
+print(format_string)
+
+str_alReves = ""
+
+for i in reversed(format_string):
+    str_alReves = str_alReves + i
+
+if format_string == str_alReves:
+    print("Es palindroma")
+
+else:
+    print("No es palindroma")
