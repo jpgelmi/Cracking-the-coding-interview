@@ -11,13 +11,13 @@ for i in range(len(string)):
              if ord(string[i]) == ord(string[k]):
                 if i != k:
                     pass
-                    #print(string[k], "está repetida")
+                    print(string[k], "está repetida")
 
         elif k != len(string):
             if ord(string[i]) == ord(string[k:k+1]):
                 if i != k:
                     pass
-                    #print(string[k:k+1] , "está repetida")
+                    print(string[k:k+1] , "está repetida")
 
 #1.2
 #Check Permutation: Given two strings,write a method to decide if one is a permutation of the
