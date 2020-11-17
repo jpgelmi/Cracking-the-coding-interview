@@ -1,5 +1,5 @@
 # Cracking-the-coding-interview
-Recopilation of the challenges that offer the book "cracking the coding interview". Here you will find my answers to the problems the book offer
+Recopilation of the challenges that offer the book "cracking the coding interview". Here you will find my answers to the problems the book offer.
 
 ## Usage
 
