@@ -87,9 +87,10 @@ if format_string == str_alReves:
 else:
     print("No es palindroma")
 
- # One Away: There are three types of edits that can be performed on strings: insert a character,
- # remove a character, or replace a character. Given two strings,
- # write a function to check if they are one edit (or zero edits) away.
+# 1.5
+# One Away: There are three types of edits that can be performed on strings: insert a character,
+# remove a character, or replace a character. Given two strings,
+# write a function to check if they are one edit (or zero edits) away.
 
 def edit(string, result):
 
@@ -110,3 +111,27 @@ def edit(string, result):
     print(flag)
 
 edit("hola", "ola")
+
+#1.6
+# String Compression: Implement a method to perform basic string compression using the counts of repeated characters.
+# For example, the string aabcccccaaa would become a2b1c5a3. If the "compressed" string would not become
+# smaller than the original string, your method should return the original string.
+# You can assume the string has only uppercase and lowercase letters (a - z).
+
+def compresion(string):
+    s_list = sorted(list(string))
+    registro = {}
+    compres_s = ""
+
+    for i in s_list:
+        registro[i] = s_list.count(i)
+
+    for i in registro:
+        compres_s = compres_s + i + str(registro[i])
+    
+    if len(compres_s) < len(string):
+        return compres_s
+    else:
+        return string 
+
+print(compresion("xxxyyybbbbbaa"))
