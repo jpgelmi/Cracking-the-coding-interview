@@ -135,3 +135,34 @@ def compresion(string):
         return string 
 
 print(compresion("xxxyyybbbbbaa"))
+
+#1.7
+#Rotate Matrix: Given an image represented by an NxN matrix, where each pixel in the image is 4 bytes,
+# write a method to rotate the image by 90 degrees. Can you do this in place?
+
+def rotate(matrix):
+    rotada = [[matrix[j][i] for j in range(len(matrix))] for i in range(len(matrix[0]))]
+    for i in rotada:
+        print(i) 
+matrix = [
+        [1,2,3],
+        [4,5,6],
+        [7,8,9]]
+rotate(matrix)
+
+#1.9
+#Assumeyou have a method isSubstringwhich checks if one word is a substring of another.
+# Given two strings, sl and s2, write code to check if s2 is a rotation of sl using only
+# one call to isSubstring (e.g.,"waterbottle" is a rotation of"erbottlewat").
+
+def isSubstringwhich(s1, s2):
+    s1_reverse = "" 
+    for i in reversed(s1):
+        s1_reverse = s1_reverse + i
+    
+    if s1_reverse == s2:
+        print(s1, 'is a rotation of', s2)
+    else:
+        print(s1, 'is not a rotation of', s2)
+
+isSubstringwhich("hola", "aloh" )
